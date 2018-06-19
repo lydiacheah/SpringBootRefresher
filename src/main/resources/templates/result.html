@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form submit success</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+</head>
+<body class="container">
+    <br>
+    <p><span style="font-style: italic;" th:text="${newObject.name}">Name of new object</span> successfully submitted.</p>
+    <p>Check out <a th:href="@{/example/all}">/example/all</a> to see it added to the database.</p>
+</body>
+</html>

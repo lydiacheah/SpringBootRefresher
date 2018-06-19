@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+</head>
+<body class="container">
+<form th:action="@{/submitForm}" th:object="${newObject}" method="post" style="margin-top:3em;">
+    <div class="form-group">
+        <label for="name">Object name</label>
+        <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Enter an example name">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

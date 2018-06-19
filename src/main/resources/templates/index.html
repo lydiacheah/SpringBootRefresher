@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- enable Thymeleaf (can open file without starting server) -->
+<!--<html lang="en">-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+    <link rel="stylesheet" href="../static/bootstrap.css" th:href="@{/bootstrap.css}"/>
+</head>
+<body class="container">
+<br>
+    <div class="alert alert-success" role="alert">
+        <h5 class="alert-heading">If this is green and pretty, Bootstrap works!</h5>
+        <p th:text="'Online mode! This is also ' + ${mode} + ' mode!'">Offline mode!</p> <!-- th:text value used if server is started -->
+        <p th:if="${mode == 'development'}">Look at resources/templates/index.html to see how conditionals with Thymeleaf work.</p>
+        <hr>
+        <p class="mb-0">Check out <a th:href="@{/form}" class="alert-link">/form</a> or <a th:href="@{/example}" class="alert-link">/example</a> for more.</p>
+    </div>
+</body>
+</html>
